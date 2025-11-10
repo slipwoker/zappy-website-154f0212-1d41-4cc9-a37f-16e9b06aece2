@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שירותי התקנת מצלמות אבטחה מקצועיים — KB-TECH</title>
+  <meta name="description" content="גלה את מגוון שירותי התקנת מצלמות אבטחה לבית והתקנות מתח נמוך מקצועיות. אינטרקום, אזעקות, בקרת כניסה ועוד.">
+  <meta name="keywords" content="התקנת מצלמות אבטחה, התקנת מצלמות אבטחה לבית, מערכת אינטרקום IP למגורים, חשמלאי מתח נמוך, מערכות אזעקה">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: static;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '154f0212-1d41-4cc9-a37f-16e9b06aece2',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/kb-tech-logo.webp" alt="KB-TECH" class="logo" />
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="פתח תפריט">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="התקשר אלינו">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services" class="active">שירותים</a></li>
+        <li><a href="/about">אודות</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">צור קשר</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>שירותי התקנת מצלמות אבטחה ומתח נמוך מקצועיים</h1>
+      <h3>פתרונות אבטחה מותאמים אישית לכל צורך - מבתים פרטיים ועד מתחמים תעשייתיים</h3>
+    </div>
+  </section>
+
+  <section class="services-detailed">
+    <div class="container">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>התקנת מצלמות אבטחה - הגנה מקסימלית עם טכנולוגיה מתקדמת</h2>
+          <p>KB-TECH מתמחה בהתקנת מצלמות אבטחה לבית ולעסקים עם הטכנולוגיות המתקדמות ביותר בשוק. אנו מציעים מצלמות IP ברזולוציה גבוהה עד 4K, עם יכולות ראיית לילה מתקדמות, זיהוי תנועה חכם וצפייה מרחוק דרך אפליקציה ייעודית בסמארטפון או טאבלט.</p>
+          <p>המערכות שלנו כוללות אחסון מקומי ו/או ענן, התראות בזמן אמת, ואפשרות לשילוב עם מערכות אבטחה נוספות כמו אזעקות ובקרת כניסה. כל התקנה מותאמת אישית לצרכי הלקוח, עם ניתוח מקצועי של נקודות החולשה והמלצות לכיסוי מיטבי.</p>
+          <div class="service-features">
+            <div class="feature-item"><i class="fas fa-check"></i> מצלמות IP ברזולוציה עד 4K</div>
+            <div class="feature-item"><i class="fas fa-check"></i> ראיית לילה מתקדמת עד 30 מטר</div>
+            <div class="feature-item"><i class="fas fa-check"></i> צפייה מרחוק דרך סמארטפון</div>
+            <div class="feature-item"><i class="fas fa-check"></i> התראות בזמן אמת</div>
+            <div class="feature-item"><i class="fas fa-check"></i> אחסון מקומי וענן</div>
+            <div class="feature-item"><i class="fas fa-check"></i> עמידות במזג אויר קשה</div>
+          </div>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-4" data-context="High-resolution security camera being installed on building corner by professional technician, showing 4K IP camera with night vision capabilities" src="assets/kb-tech-service-service-4.webp" alt="התקנת מצלמת אבטחה ברזולוציה גבוהה על פינת בניין">
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <div class="service-detail-content">
+          <h2>מערכות אינטרקום IP ואנלוגיים - תקשורת מתקדמת ובטוחה</h2>
+          <p>מערכת אינטרקום IP למגורים מספקת פתרון תקשורת מתקדם עם וידאו ברזולוציה גבוהה, אפשרות פתיחת דלתות מרחוק ושילוב מלא עם מערכות בית חכם. אנו מתקינים מערכות אינטרקום למבנים חדשים ומשדרגים מערכות קיימות לטכנולוגיה מודרנית.</p>
+          <p>המערכות שלנו כוללות יחידות פנימיות עם מסכי מגע צבעוניים, אפשרות לחיבור מספר יחידות, הקלטת שיחות וביקורים, ושילוב עם מערכות בקרת כניסה. חשמלאי מתח נמוך מקצועי מבטיח התקנה נקייה ומסודרת עם כבלים איכוtiים ותשתית עתידית.</p>
+          <div class="service-features">
+            <div class="feature-item"><i class="fas fa-check"></i> וידאו ברזולוציה גבוהה</div>
+            <div class="feature-item"><i class="fas fa-check"></i> פתיחת דלתות מרחוק</div>
+            <div class="feature-item"><i class="fas fa-check"></i> שילוב עם בית חכם</div>
+            <div class="feature-item"><i class="fas fa-check"></i> מסכי מגע צבעוניים</div>
+            <div class="feature-item"><i class="fas fa-check"></i> הקלטת שיחות וביקורים</div>
+            <div class="feature-item"><i class="fas fa-check"></i> תמיכה במספר יחידות</div>
+          </div>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-5" data-context="Modern IP intercom system with touchscreen display showing video call, installed at residential building entrance with clear interface" src="assets/kb-tech-service-service-5.webp" alt="מערכת אינטרקום IP עם מסך מגע בכניסה למבנה מגורים">
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>מערכות אזעקה עם ניטור 24/7 - הגנה מקיפה בכל רגע</h2>
+          <p>מערכות האזעקה המתקדמות שלנו מספקות הגנה מקסימלית על הבית או העסק שלך. אנו מתקינים מערכות אלחוטיות ומערכות קוויות עם חיישני תנועה מתקדמים, חיישני דלתות וחלונות, גלאי זכוכית שבורה וגלאי עשן ופחמן חד-חמצני.</p>
+          <p>כל מערכת מחוברת למרכז ניטור מקצועי שפועל 24/7, עם יכולת תגובה מיידית לאירועים חריגים. המערכות כוללות אפליקציה לשליטה מרחוק, התראות בזמן אמת לסמארטפון, והיסטוריית אירועים מפורטת. התקנת מצלמות אבטחה משולבת במערכת האזעקה מספקת פתרון הגנה מלא ומשולב.</p>
+          <div class="service-features">
+            <div class="feature-item"><i class="fas fa-check"></i> חיישני תנועה מתקדמים</div>
+            <div class="feature-item"><i class="fas fa-check"></i> ניטור מרכזי 24/7</div>
+            <div class="feature-item"><i class="fas fa-check"></i> התראות בזמן אמת</div>
+            <div class="feature-item"><i class="fas fa-check"></i> שליטה מרחוק באפליקציה</div>
+            <div class="feature-item"><i class="fas fa-check"></i> גלאי עשן ופחמן חד-חמצני</div>
+            <div class="feature-item"><i class="fas fa-check"></i> סוללת גיבוי לכל המערכת</div>
+          </div>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-6" data-context="Professional security alarm system control panel with digital touchscreen, showing armed status and zone indicators in modern home" src="assets/kb-tech-service-service-6.webp" alt="לוח בקרת מערכת אזעקה מקצועית עם מסך דיגיטלי">
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <div class="service-detail-content">
+          <h2>בקרת כניסה עם כרטיסי מגנט וזיהוי ביומטרי</h2>
+          <p>מערכות בקרת כניסה מתקדמות המאפשרות שליטה מלאה על כניסה ויציאה ממבנים, משרדים ואזורים מוגבלים. אנו מתקינים מערכות עם כרטיסי מגנט, תגים אלחוטיים, קוראי טביעת אצבע, זיהוי פנים וקוראי כרטיסים חכמים.</p>
+          <p>המערכות מאפשרות הגדרת הרשאות גישה שונות לכל משתמש, תיעוד מלא של כל כניסה ויציאה, שילוב עם מערכות נוכחות, ושליטה מרחוק דרך ממשק ניהול מתקדם. חשמלאי מתח נמוך מנוסה מבטיח התקנה מקצועית של מנעולים אלקטרוניים, קוראים ובקרים.</p>
+          <div class="service-features">
+            <div class="feature-item"><i class="fas fa-check"></i> כרטיסי מגנט ותגים אלחוטיים</div>
+            <div class="feature-item"><i class="fas fa-check"></i> זיהוי טביעת אצבע</div>
+            <div class="feature-item"><i class="fas fa-check"></i> זיהוי פנים מתקדם</div>
+            <div class="feature-item"><i class="fas fa-check"></i> הגדרת הרשאות גמישה</div>
+            <div class="feature-item"><i class="fas fa-check"></i> תיעוד מלא של כניסות</div>
+            <div class="feature-item"><i class="fas fa-check"></i> שילוב עם מערכות נוכחות</div>
+          </div>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-7" data-context="Modern biometric access control system with fingerprint scanner and card reader installed on office door, showing professional installation" src="assets/kb-tech-service-service-7.webp" alt="מערכת בקרת כניסה ביומטרית עם סורק טביעת אצבע">
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>מערכות אודיו מקצועיות - איכות שמע מושלמת</h2>
+          <p>התקנת מערכות אודיו מקצועיות לבתים פרטיים, אולמות אירועים, משרדים ומתחמים מסחריים. אנו מתמחים בתכנון ובניית מערכות אודיו רב-אזוריות, מערכות כריזה, מערכות סאונד לאירועים ומערכות בית חכם עם שליטה קולית.</p>
+          <p>המערכות שלנו כוללות רמקולים שקועי תקרה, רמקולי קיר, מגברים מקצועיים, מיקסרים ובקרי אזורים. אנו מספקים פתרון מלא מתכנון אקוסטי ועד התקנה סופית, עם כיוון מדויק של הרמקולים לאיכות שמע מיטבית. כל התקנה מבוצעת על ידי חשמלאי מתח נמוך מוסמך עם ניסיון רב בתחום האודיו.</p>
+          <div class="service-features">
+            <div class="feature-item"><i class="fas fa-check"></i> רמקולים שקועי תקרה וקיר</div>
+            <div class="feature-item"><i class="fas fa-check"></i> מערכות רב-אזוריות</div>
+            <div class="feature-item"><i class="fas fa-check"></i> שילוב עם בית חכם</div>
+            <div class="feature-item"><i class="fas fa-check"></i> מגברים ומיקסרים מקצועיים</div>
+            <div class="feature-item"><i class="fas fa-check"></i> כיוון אקוסטי מדויק</div>
+            <div class="feature-item"><i class="fas fa-check"></i> שליטה קולית ומרחוק</div>
+          </div>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-8" data-context="Professional audio system installation with ceiling speakers and wall-mounted control panel in modern living room, showing clean installation" src="assets/kb-tech-service-service-8.webp" alt="מערכת אודיו מקצועית עם רמקולי תקרה בסלון מודרני">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <h2>תהליך העבודה שלנו - מהתכנון ועד ההתקנה</h2>
+      <div class="process-steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h3>ייעוץ וסקר</h3>
+          <p>פגישת ייעוץ ראשונית בנכס, הבנת הצרכים וסקר מקצועי של המבנה לזיהוי נקודות אסטרטגיות.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h3>תכנון מערכת</h3>
+          <p>הכנת תוכנית מפורטת עם המלצות למיקום ציוד, סוג מערכות והצעת מחיר שקופה.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h3>התקנה מקצועית</h3>
+          <p>ביצוע ההתקנה על ידי חשמלאים מוסמכים, עם דגש על עבודה נקייה ומסודרת.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <h3>הדרכה ותמיכה</h3>
+          <p>הדרכה מקיפה על השימוש במערכת, תמיכה טכנית זמינה 24/7 ושירות תחזוקה שוטף.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>מעוניינים בשירותי התקנת מצלמות אבטחה לבית או לעסק?</h2>
+        <p>צרו קשר עוד היום לקבלת ייעוץ מקצועי והצעת מחיר מפורטת. הצוות שלנו זמין לענות על כל שאלה ולתכנן עבורכם את הפתרון המתאים ביותר לצרכים שלכם.</p>
+        <a href="/contact" class="btn-primary">קבל הצעת מחיר</a>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 KB-TECH. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="privacy.html" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="accessibility.html" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="terms.html" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות <a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '154f0212-1d41-4cc9-a37f-16e9b06aece2';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          header.style.display = 'block';
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+    <script src="script.js"></script>
+</body></html>

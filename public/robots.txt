@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kb-tech-154f0212.zappy5.app/sitemap.xml
